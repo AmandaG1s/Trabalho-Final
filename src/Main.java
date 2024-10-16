@@ -1,5 +1,3 @@
-import java.sql.SQLOutput;
-
 public class Main {
     public static void main(String[] args) {
         Estudante estudante = new Estudante("Amanda", "11122233300", "18/03/2005", 8.0, "Graduação", "Estágio em TI");
