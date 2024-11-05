@@ -10,6 +10,10 @@ public class Estudante extends Pessoa {
         this.extersao = extersao;
     }
 
+    public String getDescricao() {
+        return "Estudante de " + tipo + " com CRA " + cra;
+    }
+
     public double getCra() {
         return cra;
     }

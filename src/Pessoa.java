@@ -1,4 +1,4 @@
-public class Pessoa {
+public abstract class Pessoa {
     protected String nome;
     protected String cpf;
     protected String dataNascimento;
@@ -32,6 +32,8 @@ public class Pessoa {
     public void setDataNascimento(String dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
+
+    public abstract String getDescricao();
 
     public String toString(){
         return "Nome: " + nome + "\n" +

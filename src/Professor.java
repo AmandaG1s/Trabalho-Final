@@ -8,6 +8,10 @@ public class Professor extends Pessoa{
         this.departamento = departamento;
     }
 
+    public String getDescricao() {
+        return "Professor do departamento de " + departamento;
+    }
+
     public String getDepartamento() {
         return departamento;
     }
