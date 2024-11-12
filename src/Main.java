@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        Estudante estudante = new Estudante("Amanda", "11122233300", "18/03/2005", 8.0, "Graduação", "Estágio em TI");
-        Estudante estudante2 = new Estudante("João Gabriel", "44455566600", "12/10/2003", 8.5, "Pós-Graduação", "Pesquisa em SQL");
+        Estudante estudante = new Estudante("Amanda", "11122233300", "18/03/2005", 8.0);
+        Estudante estudante2 = new Estudante("João Gabriel", "44455566600", "12/10/2003", 8.5);
 
         Professor professor = new Professor("Bruno", "77788899900", "21/09/1985", false, "Computação");
 
@@ -25,6 +25,4 @@ public class Main {
         System.out.println("\nTurma: ");
         System.out.println(turma);
     }
-
-
 }
