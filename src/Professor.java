@@ -3,7 +3,7 @@ import java.io.Serializable;
 public class Professor extends Pessoa implements Serializable {
     private boolean novoContrato;
     private String departamento;
-
+    private static final long serialVersionUID = 1L;
     public Professor(String nome, String cpf, String dataNascimento, boolean novoContrato, String departamento) {
         super(nome, cpf, dataNascimento);
         this.novoContrato = novoContrato;

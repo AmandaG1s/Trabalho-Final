@@ -1,8 +1,12 @@
-public abstract class Pessoa {
+import java.io.Serializable;
+
+public abstract class Pessoa implements Serializable {
     protected String nome;
     protected String cpf;
     protected String dataNascimento;
+    private static final long serialVersionUID = 1L;
 
+    public Pessoa(){}
     public Pessoa(String nome, String cpf, String dataNascimento) {
         this.nome = nome;
         this.cpf = cpf;

@@ -32,7 +32,7 @@ public class Main {
 
             switch (opcao) {
                 case 1:
-                    sc.nextLine(); // Limpar buffer
+                    sc.nextLine();
                     System.out.print("Nome: ");
                     String nome = sc.nextLine();
                     System.out.print("CPF: ");
@@ -51,7 +51,7 @@ public class Main {
             }
         } while (opcao != 3);
 
-        // Salvar dados
+
         try {
             Persistencia.salvarArq(universidade.getEstudantes(), ARQUIVO_ESTUDANTES);
             Persistencia.salvarArq(universidade.getProfessores(), ARQUIVO_PROFESSORES);

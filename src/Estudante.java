@@ -3,7 +3,9 @@ import java.util.List;
 
 public class Estudante extends Pessoa implements Serializable {
     private double cra;
+    private static final long serialVersionUID = 1L;
 
+    public Estudante(){}
     public Estudante(String nome, String cpf, String dataNascimento, double cra) {
         super(nome, cpf, dataNascimento);
         this.cra = cra;

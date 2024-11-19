@@ -10,12 +10,18 @@ public class Persistencia {
         }
     }
 
-    public static <T> ArrayList<T> carregarArq(String arquivo) throws IOException, ClassNotFoundException {
+    public static <T> ArrayList<T> carregarArq(String arquivo) {
+        ArrayList<T> dados = new ArrayList<>(); // Inicializa com uma lista vazia
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(arquivo))) {
-            ArrayList<T> dados = (ArrayList<T>) ois.readObject();
+            dados = (ArrayList<T>) ois.readObject();
             System.out.println("Dados carregados do arquivo: " + arquivo);
             System.out.println("Quantidade de itens carregados: " + dados.size());
-            return dados;
+        } catch (FileNotFoundException e) {
+            System.out.println("Arquivo não encontrado: " + arquivo + ". Um novo arquivo será criado.");
+            // Não precisa fazer nada, já que 'dados' já foi inicializado como uma lista vazia.
+        } catch (IOException | ClassNotFoundException e) {
+            System.err.println("Erro ao carregar os dados do arquivo " + arquivo + ": " + e.getMessage());
         }
+        return dados;
     }
 }
