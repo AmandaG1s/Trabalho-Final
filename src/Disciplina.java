@@ -1,10 +1,13 @@
-public class Disciplina {
+import java.io.Serializable;
+
+public class Disciplina implements Serializable {
 
         private String codigo;
         private String nome;
         private int cargaHoraria;
+        private static final long serialVersionUID = 1L;
 
-        public Disciplina(String codigo, String nome, int cargaHoraria) {
+    public Disciplina(String codigo, String nome, int cargaHoraria) {
             this.codigo = codigo;
             this.nome = nome;
             this.cargaHoraria = cargaHoraria;

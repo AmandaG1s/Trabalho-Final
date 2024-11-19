@@ -1,6 +1,7 @@
+import java.io.Serializable;
 import java.util.List;
 
-public class Estudante extends Pessoa {
+public class Estudante extends Pessoa implements Serializable {
     private double cra;
 
     public Estudante(String nome, String cpf, String dataNascimento, double cra) {
@@ -14,6 +15,11 @@ public class Estudante extends Pessoa {
 
     public void setCra(double cra) {
         this.cra = cra;
+    }
+
+    @Override
+    public String getDescricao() {
+        return "";
     }
 
     /**
