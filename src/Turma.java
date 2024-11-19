@@ -5,7 +5,6 @@ public class Turma implements Serializable {
     private String semestre;
     private int ano;
 
-    private static final long serialVersionUID = 1L;
 
 
     public Turma(Disciplina disciplina, String semestre, int ano) {

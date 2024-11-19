@@ -3,25 +3,23 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-    private static final String ARQUIVO_ESTUDANTES = "estudantes.ser";
-    private static final String ARQUIVO_PROFESSORES = "professores.ser";
-    private static final String ARQUIVO_DISCIPLINAS = "disciplinas.ser";
-    private static final String ARQUIVO_TURMAS = "turmas.ser";
+    private static final String ARQUIVO_ESTUDANTES = "estudantes.dat";
+    private static final String ARQUIVO_PROFESSORES = "professores.dat";
+    private static final String ARQUIVO_DISCIPLINAS = "disciplinas.dat";
+    private static final String ARQUIVO_TURMAS = "turmas.dat";
 
     public static void main(String[] args) {
         UniversidadeSist universidade = new UniversidadeSist();
 
-        // Carregar dados
         try {
             universidade.getEstudantes().addAll(Persistencia.carregarArq(ARQUIVO_ESTUDANTES));
             universidade.getProfessores().addAll(Persistencia.carregarArq(ARQUIVO_PROFESSORES));
             universidade.getDisciplinas().addAll(Persistencia.carregarArq(ARQUIVO_DISCIPLINAS));
             universidade.getTurmas().addAll(Persistencia.carregarArq(ARQUIVO_TURMAS));
         } catch (Exception e) {
-            System.out.println("Nenhum arquivo encontrado. Começando com dados vazios.");
+            System.out.println("Nenhum arquivo encontrado.\n");
         }
 
-        // Menu interativo
         Scanner sc = new Scanner(System.in);
         int opcao;
         do {

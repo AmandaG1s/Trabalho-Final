@@ -8,6 +8,7 @@ public class UniversidadeSist implements Serializable { // Implementa Serializab
     private ArrayList<Disciplina> disciplinas;
     private ArrayList<Turma> turmas;
 
+
     public UniversidadeSist() {
         estudantes = new ArrayList<>();
         professores = new ArrayList<>();
