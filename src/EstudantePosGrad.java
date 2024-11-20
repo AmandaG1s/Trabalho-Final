@@ -1,7 +1,10 @@
-public class EstudantePosGrad extends Estudante implements Requisitos{
+import java.io.Serializable;
+
+public class EstudantePosGrad extends Estudante implements Requisitos, Serializable {
 
     private String temaPesquisa;
 
+    public EstudantePosGrad(){}
     public EstudantePosGrad(String nome, String cpf, String dataNascimento, double cra, String temaPesquisa) {
         super(nome, cpf, dataNascimento, cra);
         this.temaPesquisa = temaPesquisa;
@@ -18,7 +21,7 @@ public class EstudantePosGrad extends Estudante implements Requisitos{
     public String getDescricao(){
         return "nome: " + nome +
                 "\ntipo: Pós Graduacao" +
-                "tema de pesquisa: " + temaPesquisa;
+                "\ntema de pesquisa: " + temaPesquisa;
     }
 
     @Override

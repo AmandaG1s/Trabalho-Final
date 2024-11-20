@@ -1,15 +1,16 @@
 import java.io.Serializable;
 import java.util.Scanner;
 
-public class EstudanteGrad extends Estudante implements Requisitos {
+public class EstudanteGrad extends Estudante implements Requisitos, Serializable {
 
     private String temaEstagio;
     private int periodo;
 
-
-    public EstudanteGrad(String nome, String cpf, String dataNascimento, double cra, int periodo) {
+    public EstudanteGrad(){}
+    public EstudanteGrad(String nome, String cpf, String dataNascimento, double cra, int periodo, String temaEstagio) {
         super(nome, cpf, dataNascimento, cra);
         this.periodo = periodo;
+        this.temaEstagio = temaEstagio;
     }
 
     public String getTemaEstagio() {
@@ -23,10 +24,10 @@ public class EstudanteGrad extends Estudante implements Requisitos {
     @Override
     public void defineEstagio() {
         if(periodo < 2){
-            throw new UnsupportedOperationException("Estudantes de graduação só podem realizar estagio apos o segundo período completo!!");
+            throw new UnsupportedOperationException("Este estudante nao pode estagiar pois nao concluiu o segundo periodo");
         }
         else{
-            System.out.printf("Qual o tema do estagio?: ");
+            System.out.printf("Tema do estagio: ");
             Scanner sc = new Scanner(System.in);
             temaEstagio = sc.nextLine();
         }

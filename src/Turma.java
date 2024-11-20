@@ -7,6 +7,7 @@ public class Turma implements Serializable {
     private static final long serialVersionUID = 1L;
 
 
+    public Turma(){}
     public Turma(Disciplina disciplina, String semestre, int ano) {
         this.disciplina = disciplina;
         this.semestre = semestre;
