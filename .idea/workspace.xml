@@ -5,24 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51e10f30-e820-4d4c-91f6-1db6210af530" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/disciplinas.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/estudantes.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/professores.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/turmas.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Estudante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Estudante.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EstudanteGrad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EstudanteGrad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EstudantePosGrad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EstudantePosGrad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/disciplinas.dat" beforeDir="false" afterPath="$PROJECT_DIR$/disciplinas.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pessoa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Requisitos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Requisitos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/turmas.dat" beforeDir="false" afterPath="$PROJECT_DIR$/turmas.dat" afterDir="false" />
     </list>
-    <list id="994c2bbc-6381-442f-b693-d414b184f32a" name="Changes by amand" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Estudante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Estudante.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EstudanteGrad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EstudanteGrad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UniversidadeSist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UniversidadeSist.java" afterDir="false" />
-    </list>
+    <list id="994c2bbc-6381-442f-b693-d414b184f32a" name="Changes by amand" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,34 +58,6 @@
     &quot;accountId&quot;: &quot;68cfc45b-87f9-4f37-9e29-324897bbed44&quot;
   }
 }</component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/EstudanteGrad.java">
-      <ranges>
-        <range start1="25" end1="25" start2="25" end2="26" changelist="51e10f30-e820-4d4c-91f6-1db6210af530" />
-        <range start1="45" end1="46" start2="46" end2="47" changelist="994c2bbc-6381-442f-b693-d414b184f32a" />
-        <range start1="49" end1="49" start2="50" end2="57" changelist="51e10f30-e820-4d4c-91f6-1db6210af530" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/Estudante.java">
-      <ranges>
-        <range start1="3" end1="4" start2="3" end2="4" changelist="994c2bbc-6381-442f-b693-d414b184f32a" />
-        <range start1="22" end1="25" start2="22" end2="23" changelist="994c2bbc-6381-442f-b693-d414b184f32a" />
-        <range start1="31" end1="34" start2="29" end2="33" changelist="51e10f30-e820-4d4c-91f6-1db6210af530" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/Main.java">
-      <ranges>
-        <range start1="10" end1="10" start2="10" end2="11" changelist="51e10f30-e820-4d4c-91f6-1db6210af530" />
-        <range start1="11" end1="11" start2="12" end2="17" changelist="51e10f30-e820-4d4c-91f6-1db6210af530" />
-        <range start1="50" end1="51" start2="56" end2="56" changelist="51e10f30-e820-4d4c-91f6-1db6210af530" />
-        <range start1="53" end1="55" start2="58" end2="65" changelist="51e10f30-e820-4d4c-91f6-1db6210af530" />
-        <range start1="63" end1="63" start2="73" end2="74" changelist="994c2bbc-6381-442f-b693-d414b184f32a" />
-        <range start1="70" end1="70" start2="81" end2="82" changelist="994c2bbc-6381-442f-b693-d414b184f32a" />
-        <range start1="79" end1="83" start2="91" end2="92" changelist="994c2bbc-6381-442f-b693-d414b184f32a" />
-        <range start1="84" end1="84" start2="93" end2="94" changelist="994c2bbc-6381-442f-b693-d414b184f32a" />
-      </ranges>
-    </file>
-  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -151,6 +111,7 @@
       <workItem from="1731438133534" duration="5749000" />
       <workItem from="1732048196232" duration="551000" />
       <workItem from="1732111186491" duration="3385000" />
+      <workItem from="1732129732728" duration="2739000" />
     </task>
     <servers />
   </component>

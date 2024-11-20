@@ -38,8 +38,8 @@ public class Main {
             System.out.println("| 2. Listar Estudantes   |");
             System.out.println("| 3. Cadastrar Professor |");
             System.out.println("| 4. Listar Professor    |");
-            System.out.println("| 5. Cadastrar Diciplina |");
-            System.out.println("| 6. Listar Diciplina    |");
+            System.out.println("| 5. Cadastrar Disciplina |");
+            System.out.println("| 6. Listar Disciplina    |");
             System.out.println("| 7. Cadastrar Turma     |");
             System.out.println("| 8. Listar Turma        |");
             System.out.println("| 9. Sair                |");
@@ -139,28 +139,36 @@ public class Main {
                 case 7:
                     Disciplina disciplina = null;
                     sc.nextLine();
-                    while(disciplina == null) {
-                        System.out.println("Código da Diciplina: ");
+                    int test = 0;
+                    boolean t2 = true;
+                    while(test < 3) {
+                        System.out.println("Código da Disciplina: ");
                         String codDic = sc.nextLine();
 
                         for(Disciplina disc : universidade.getDisciplinas()){
                             if(disc.getCodigo().equals(codDic)) {
                                 disciplina = disc;
+                                test = 3;
+                                t2 = true;
                                 break;
                             }
                         }
                         if(disciplina == null){
                             System.out.println("Essa disciplina não é valida, tente outra que seja");
+                            test++;
+                            t2 = false;
                         }
 
                     }
+                    if(t2){
+                        System.out.print("Semestre: ");
+                        String semestre = sc.nextLine();
+                        System.out.print("Ano: ");
+                        int anoT = sc.nextInt();
+                        universidade.cadastrarTurma(new Turma(disciplina, semestre, anoT));
+                        break;
+                    }
 
-                    System.out.print("Semestre: ");
-                    String semestre = sc.nextLine();
-                    System.out.print("Ano: ");
-                    int anoT = sc.nextInt();
-                    universidade.cadastrarTurma(new Turma(disciplina, semestre, anoT));
-                    break;
 
                 case 8:
                     for(Turma t : universidade.getTurmas()){
