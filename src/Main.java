@@ -137,23 +137,24 @@ public class Main {
                     break;
 
                 case 7:
-                    sc.nextLine();
-                    System.out.println("Código da Diciplina: ");
-                    String codDic = sc.nextLine();
-                    while()
                     Disciplina disciplina = null;
+                    sc.nextLine();
+                    while(disciplina == null) {
+                        System.out.println("Código da Diciplina: ");
+                        String codDic = sc.nextLine();
 
-                    /*
-                    for(Disciplina disc : universidade.getDisciplinas()){
-                        if(disc.getCodigo().equals(codDic)){
-                            disciplina = disc;
-                            break;
-                        }else {
-                            System.out.println("Essa disciplina não foi encontrada!");
-                            break;
+                        for(Disciplina disc : universidade.getDisciplinas()){
+                            if(disc.getCodigo().equals(codDic)) {
+                                disciplina = disc;
+                                break;
+                            }
                         }
+                        if(disciplina == null){
+                            System.out.println("Essa disciplina não é valida, tente outra que seja");
+                        }
+
                     }
-                    */
+
                     System.out.print("Semestre: ");
                     String semestre = sc.nextLine();
                     System.out.print("Ano: ");
