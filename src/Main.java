@@ -10,26 +10,15 @@ import java.util.Scanner;
  */
 public class Main {
 
-    /**
-     * @nota Essas constantes representam os nomes dos arquivos onde os dados dos estudantes, professores, diciplinas e turmas
-     * serão armazenadas e carregadas. Cada uma delas contém um nome do arquivo que será usado pelo sistema. O uso das constantes
-     * foi para evitar a duplicação de valores, otimizar a manutenção e atualização do código.
-     *
-     */
-    private static final String ARQUIVO_ESTUDANTES = "estudantes.dat";
-    private static final String ARQUIVO_PROFESSORES = "professores.dat";
-    private static final String ARQUIVO_DISCIPLINAS = "disciplinas.dat";
-    private static final String ARQUIVO_TURMAS = "turmas.dat";
-
     public static void main(String[] args) {
         UniversidadeSist universidade = new UniversidadeSist();
 
         try {
             //Está adicionando todos os estudantes carregados do arquivo
-            universidade.getEstudantes().addAll(Persistencia.carregarArq(ARQUIVO_ESTUDANTES));
-            universidade.getProfessores().addAll(Persistencia.carregarArq(ARQUIVO_PROFESSORES));
-            universidade.getDisciplinas().addAll(Persistencia.carregarArq(ARQUIVO_DISCIPLINAS));
-            universidade.getTurmas().addAll(Persistencia.carregarArq(ARQUIVO_TURMAS));
+            universidade.getEstudantes().addAll(Persistencia.carregarArq("estudantes.dat"));
+            universidade.getProfessores().addAll(Persistencia.carregarArq("professores.dat"));
+            universidade.getDisciplinas().addAll(Persistencia.carregarArq("disciplinas.dat"));
+            universidade.getTurmas().addAll(Persistencia.carregarArq("turmas.dat"));
         } catch (Exception e) {
             System.out.println("Nenhum arquivo encontrado.\n");
         }
@@ -81,16 +70,19 @@ public class Main {
                         System.out.println("Tema da pesquisa: ");
                         String temaP = sc.nextLine();
                         universidade.cadastrarEstudante(new EstudantePosGrad(nome, cpf, dataNascimento, cra, temaP));
+                    } else{
+                        System.out.println("Opção invalida! Escolha uma que seja valida");
                     }
 
-
                     break;
+
                 case 2:
                     for (Estudante e : universidade.getEstudantes()) {
                         System.out.println(e);
                         System.out.println("---------------------------------------------");
                     }
                     break;
+
                 case 3:
                     sc.nextLine();
                     System.out.print("Nome: ");
@@ -168,10 +160,10 @@ public class Main {
 
 
         try {
-            Persistencia.salvarArq(universidade.getEstudantes(), ARQUIVO_ESTUDANTES);
-            Persistencia.salvarArq(universidade.getProfessores(), ARQUIVO_PROFESSORES);
-            Persistencia.salvarArq(universidade.getDisciplinas(), ARQUIVO_DISCIPLINAS);
-            Persistencia.salvarArq(universidade.getTurmas(), ARQUIVO_TURMAS);
+            Persistencia.salvarArq(universidade.getEstudantes(), "estudantes.dat");
+            Persistencia.salvarArq(universidade.getProfessores(), "professores.dat");
+            Persistencia.salvarArq(universidade.getDisciplinas(), "disciplinas.dat");
+            Persistencia.salvarArq(universidade.getTurmas(), "turmas.dat");
         } catch (IOException e) {
             System.err.println("Erro ao salvar os dados: " + e.getMessage());
         }
