@@ -39,10 +39,10 @@ public abstract class Pessoa implements Serializable {
 
     public abstract String getDescricao();
 
-    public String toString(){
+    @Override
+    public String toString() {
         return "Nome: " + nome + "\n" +
-                "CPF: " + cpf  + "\n" +
-                "Data de Nascimento: " + dataNascimento + "\n";
-
+                "CPF: " + cpf + "\n" +
+                "Data de Nascimento: " + dataNascimento;
     }
 }

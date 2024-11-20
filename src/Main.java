@@ -8,7 +8,13 @@ import java.util.Scanner;
  * João Gabriel Nunes;
  * João Gabriel Viana
  */
+
 public class Main {
+    public static void validaCPF(String cpf){
+        if(cpf.length() != 11){
+            System.out.println("CPF invalido");
+        }
+    }
 
     public static void main(String[] args) {
         UniversidadeSist universidade = new UniversidadeSist();
@@ -48,11 +54,15 @@ public class Main {
                     System.out.println("2. Estudante Pos-Graduação");
                     int tipoEstudante = sc.nextInt();
                     sc.nextLine();
-
                     System.out.print("Nome: ");
                     String nome = sc.nextLine();
-                    System.out.print("CPF: ");
-                    String cpf = sc.nextLine();
+                    //validando o cpf
+                    String cpf = "";
+                    while(cpf.length() != 11){
+                        System.out.print("CPF (somente numeros): ");
+                        cpf = sc.nextLine();
+                        validaCPF(cpf);
+                    }
                     System.out.print("Data de Nascimento: ");
                     String dataNascimento = sc.nextLine();
                     System.out.print("CRA: ");
@@ -61,6 +71,7 @@ public class Main {
                     if(tipoEstudante == 1){
                         System.out.println("Periodo: ");
                         int periodo = sc.nextInt();
+                        sc.nextLine();
                         System.out.println("Tema de estagio: ");
                         String temaEst = sc.nextLine();
 
@@ -68,6 +79,7 @@ public class Main {
 
                     } else if (tipoEstudante == 2) {
                         System.out.println("Tema da pesquisa: ");
+                        sc.nextLine();
                         String temaP = sc.nextLine();
                         universidade.cadastrarEstudante(new EstudantePosGrad(nome, cpf, dataNascimento, cra, temaP));
                     } else{
@@ -77,11 +89,9 @@ public class Main {
                     break;
 
                 case 2:
-                    for (Estudante e : universidade.getEstudantes()) {
-                        System.out.println(e);
-                        System.out.println("---------------------------------------------");
-                    }
+                    universidade.listarEstudantes();
                     break;
+
 
                 case 3:
                     sc.nextLine();
@@ -130,8 +140,10 @@ public class Main {
                     sc.nextLine();
                     System.out.println("Código da Diciplina: ");
                     String codDic = sc.nextLine();
+                    while()
                     Disciplina disciplina = null;
 
+                    /*
                     for(Disciplina disc : universidade.getDisciplinas()){
                         if(disc.getCodigo().equals(codDic)){
                             disciplina = disc;
@@ -141,6 +153,7 @@ public class Main {
                             break;
                         }
                     }
+                    */
                     System.out.print("Semestre: ");
                     String semestre = sc.nextLine();
                     System.out.print("Ano: ");

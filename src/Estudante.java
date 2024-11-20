@@ -1,7 +1,7 @@
 import java.io.Serializable;
 import java.util.List;
 
-public class Estudante extends Pessoa implements Serializable {
+public abstract class Estudante extends Pessoa implements Serializable {
     private double cra;
     private static final long serialVersionUID = 1L;
 
@@ -20,17 +20,16 @@ public class Estudante extends Pessoa implements Serializable {
     }
 
     @Override
-    public String getDescricao() {
-        return "";
-    }
+    public abstract String getDescricao();
 
     /**
      * @note
      * Na função toString é feito uma verificação, usa-se o equals (função do java) para comparar as duas string e a partir disso
      * direcionar para o tipo específico
      */
-    public String toString(){
-        return super.toString() +
-                "CRA: " + cra + "\n";
+    @Override
+    public String toString() {
+        return super.toString() + "\n" +
+                                  "CRA: " + cra;
     }
 }

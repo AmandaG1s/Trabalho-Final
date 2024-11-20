@@ -49,4 +49,16 @@ public class UniversidadeSist implements Serializable { // Implementa Serializab
         turmas.add(turma);
     }
 
+    public void listarEstudantes(){
+        if(estudantes.isEmpty()){
+            System.out.println("Nunhum estudante foi cadastrado!");
+        }
+        System.out.println("\nEstudantes: ");
+        for(Estudante estudante: estudantes){
+            System.out.println(estudante.toString());
+            System.out.println("---------------------------------------------");
+        }
+
+    }
+
 }

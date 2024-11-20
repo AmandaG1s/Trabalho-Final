@@ -25,6 +25,7 @@ public class EstudantePosGrad extends Estudante implements Requisitos, Serializa
     }
 
     @Override
+    //exception lançada caso a função seja chamada em um estudante de pos grad
     public void defineEstagio() {
         throw new UnsupportedOperationException("Estudantes de pós graduação não realizam estágio!!");
     }
@@ -37,5 +38,11 @@ public class EstudantePosGrad extends Estudante implements Requisitos, Serializa
         else{
             return false;
         }
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\n" +
+                "Tema de Pesquisa: " + temaPesquisa;
     }
 }

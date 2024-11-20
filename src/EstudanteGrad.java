@@ -23,6 +23,7 @@ public class EstudanteGrad extends Estudante implements Requisitos, Serializable
 
     @Override
     public void defineEstagio() {
+        //exception lançada caso o estudante nao tenha concluido o segundo perio
         if(periodo < 2){
             throw new UnsupportedOperationException("Este estudante nao pode estagiar pois nao concluiu o segundo periodo");
         }
@@ -43,8 +44,15 @@ public class EstudanteGrad extends Estudante implements Requisitos, Serializable
 
     @Override
     public String getDescricao() {
-        return "nome: " + nome +
+        return  "nome: " + nome +
                 "\ntipo: Pós Graduacao" +
                 "tema de estagio: " + temaEstagio;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\n" +
+                "Tema do Estágio: " + temaEstagio + "\n" +
+                "Período: " + periodo;
     }
 }
